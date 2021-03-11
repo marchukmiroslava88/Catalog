@@ -1,0 +1,13 @@
+{
+    "name": "onlinestore/catalog-plugin",
+    "type": "october-plugin",
+    "authors": [
+        {
+            "name": "miroslava",
+            "email": "m.marchuk@kitsoft.kiev.ua"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "description": ""
+}

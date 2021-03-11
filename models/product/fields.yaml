@@ -1,0 +1,26 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    active:
+        label: 'Отображать на сайте'
+        type: checkbox
+        default: true
+    title:
+        label: 'Название'
+        span: left
+        required: 1
+        type: text
+    slug:
+        label: 'URL'
+        span: right
+        required: 1
+        preset: title
+        type: text
+    description:
+        label: 'Описание'
+        type: richeditor
+    attachments:
+        label: Файлы
+        type: fileupload

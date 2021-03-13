@@ -80,5 +80,5 @@ class Product extends Model
     public $morphOne = [];
     public $morphMany = [];
     public $attachOne = [];
-    public $attachMany = ['attachments' => ['System\Models\File']];
+    public $attachMany = ['featured_images' => ['KitSoft\Pages\Models\SystemFile']];
 }

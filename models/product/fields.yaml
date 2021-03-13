@@ -25,6 +25,6 @@ fields:
     description:
         label: 'Описание'
         type: richeditor
-    attachments:
+    featured_images:
         label: Файлы
         type: fileupload

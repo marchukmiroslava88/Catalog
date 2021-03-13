@@ -5,6 +5,8 @@ use OnlineStore\Catalog\Models\Product;
 
 class Products extends ComponentBase
 {
+    public $products;
+
     public function componentDetails()
     {
         return [
@@ -16,6 +18,10 @@ class Products extends ComponentBase
     public function defineProperties()
     {
         return [];
+    }
+
+    public function onRun() {
+        $this->products = $this->getProducts();
     }
 
     public function getProducts()

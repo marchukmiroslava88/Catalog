@@ -11,10 +11,11 @@ class CreateProductsTable extends Migration
         Schema::create('onlinestore_catalog_products', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->boolean('active')->default(0);
             $table->string('title');
+            $table->text('short_description');
             $table->text('description');
-            $table->string('slug')->unique();
+            $table->string('slug');
+            $table->boolean('published')->default(false);
             $table->timestamps();
         });
     }

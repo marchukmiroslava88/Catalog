@@ -58,6 +58,16 @@ class Product extends Model
     ];
 
     /**
+     * scopeIsPublished
+     */
+    public function scopeIsPublished($query)
+    {
+        return $query
+            ->whereNotNull('published')
+            ->where('published', true);
+    }
+
+    /**
      * @var array Relations
      */
     public $hasOne = [];

@@ -3,7 +3,7 @@
 # ===================================
 
 fields:
-    active:
+    published:
         label: 'Отображать на сайте'
         type: checkbox
         default: true
@@ -18,6 +18,10 @@ fields:
         required: 1
         preset: title
         type: text
+    short_description:
+        label: 'Краткое описание'
+        type: textarea
+        size: small
     description:
         label: 'Описание'
         type: richeditor

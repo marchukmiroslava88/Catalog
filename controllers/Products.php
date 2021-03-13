@@ -16,6 +16,8 @@ class Products extends Controller
         'Backend.Behaviors.ListController'
     ];
 
+    public $bodyClass = 'compact-container';
+
     /**
      * @var string Configuration file for the `FormController` behavior.
      */

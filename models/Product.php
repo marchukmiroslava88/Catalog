@@ -9,6 +9,10 @@ class Product extends Model
 {
     use \October\Rain\Database\Traits\Validation;
 
+    public $implement = [
+        '@KitSoft.Pages.Behaviors.RelationFinderModel'
+    ];
+
     /**
      * @var string The database table used by the model.
      */

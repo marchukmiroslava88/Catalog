@@ -3,10 +3,6 @@
 # ===================================
 
 fields:
-    published:
-        label: 'Отображать на сайте'
-        type: checkbox
-        default: true
     title:
         label: 'Название'
         span: left
@@ -28,3 +24,12 @@ fields:
     attachments:
         label: Файлы
         type: fileupload
+
+secondaryTabs:
+    fields:
+        published:
+            label: 'Отображать на сайте'
+            type: checkbox
+            default: true
+        preview_button@update:
+            type: partial

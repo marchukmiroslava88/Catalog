@@ -28,6 +28,7 @@ class Plugin extends PluginBase
         return [
             'OnlineStore\Catalog\Components\Products' => 'catalog',
             'OnlineStore\Catalog\Components\Product' => 'product',
+            'OnlineStore\Catalog\Components\Categories' => 'categories',
         ];
     }
 
@@ -56,6 +57,12 @@ class Plugin extends PluginBase
                         'label'       => 'Товары',
                         'icon'        => 'icon-th',
                         'url'         => Backend::url('onlinestore/catalog/products'),
+                        'permissions' => ['onlinestore.catalog.*']
+                    ],
+                    'categories' => [
+                        'label'       => 'Категории',
+                        'icon'        => 'icon-bars',
+                        'url'         => Backend::url('onlinestore/catalog/categories'),
                         'permissions' => ['onlinestore.catalog.*']
                     ],
                 ]

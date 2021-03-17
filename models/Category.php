@@ -3,9 +3,9 @@
 use Model;
 
 /**
- * Product Model
+ * Category Model
  */
-class Product extends Model
+class Category extends Model
 {
     use \October\Rain\Database\Traits\Validation;
 
@@ -16,7 +16,7 @@ class Product extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'onlinestore_catalog_products';
+    public $table = 'onlinestore_catalog_categories';
 
     /**
      * @var array Guarded fields
@@ -75,16 +75,16 @@ class Product extends Model
      * @var array Relations
      */
     public $hasOne = [];
-    public $hasMany = [];
+    public $hasMany = [
+        'products' => 'OnlineStore\Catalog\Models\Product'
+    ];
     public $hasOneThrough = [];
     public $hasManyThrough = [];
-    public $belongsTo = [
-        'category' => 'OnlineStore\Catalog\Models\Category'
-    ];
+    public $belongsTo = [];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
     public $attachOne = [];
-    public $attachMany = ['featured_images' => ['KitSoft\Pages\Models\SystemFile']];
+    public $attachMany = [];
 }

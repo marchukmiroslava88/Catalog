@@ -4,11 +4,11 @@ use Schema;
 use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
 
-class CreateProductsTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     public function up()
     {
-        Schema::create('onlinestore_catalog_products', function (Blueprint $table) {
+        Schema::create('onlinestore_catalog_categories', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('title')->nullable();
@@ -16,13 +16,12 @@ class CreateProductsTable extends Migration
             $table->text('description')->nullable();
             $table->string('slug');
             $table->boolean('published')->default(false);
-            $table->integer('category_id')->nullable()->unsigned();
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('onlinestore_catalog_products');
+        Schema::dropIfExists('onlinestore_catalog_categories');
     }
 }

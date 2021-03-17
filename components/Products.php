@@ -1,11 +1,11 @@
 <?php namespace OnlineStore\Catalog\Components;
 
 use Cms\Classes\ComponentBase;
-use OnlineStore\Catalog\Models\Product;
+use OnlineStore\Catalog\Models\Category;
 
 class Products extends ComponentBase
 {
-    public $products;
+    public $category;
 
     public function componentDetails()
     {
@@ -17,15 +17,29 @@ class Products extends ComponentBase
 
     public function defineProperties()
     {
-        return [];
+        return [
+            'slug' => [
+              'title' => 'Параметр URL',
+              'default' => '{{ :id }}',
+              'type' => 'string'
+            ],
+        ];
     }
 
-    public function onRun() {
-        $this->products = $this->getProducts();
-    }
-
-    public function getProducts()
+    public function onRun()
     {
-        return Product::orderBy('id', 'desc')->get();
+        $this->category = $this->loadCategory();
+    }
+
+    /**
+     * loadCategory
+     */
+    protected function loadCategory()
+    {
+        $slug = $this->property('slug');
+
+        return Category::with('products')
+                ->where('slug', $slug)
+                ->first();
     }
 }

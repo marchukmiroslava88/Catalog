@@ -1,3 +1,36 @@
-<p>This is the default markup for component Product</p>
+{% set product = __SELF__ . product %}
 
-<small>You can delete this file if you want</small>
+<section class="container mt-5">
+    <h1 class="mb-4">{{ product.title }}</h1>
+    <div class="row">
+        <div class="col-lg-4">
+            {% if product.featured_images|length > 1 %}
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    {% for image in product.featured_images %}
+                    <div class="carousel-item {% if loop.index0 %} active {% endif %}" style="height: 350px; background: #e6e6e6">
+                        <img class="d-block w-100" src="{{ image.path }}" alt="First slide">
+                    </div>
+                    {% endfor %}
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            {% else %}
+            {% set image = product.featured_images|first.path ?? 'assets/images/default-image.png'|theme %}
+            <div class="" style="height: 350px; background: #e6e6e6">
+                <img class="d-block w-100" src="{{ image }}" alt="image">
+            </div>
+            {% endif %}
+        </div>
+        <div class="col-lg-8">
+            {{ product.description|raw }}
+        </div>
+    </div>
+</section>

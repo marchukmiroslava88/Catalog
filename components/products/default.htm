@@ -1,3 +1,21 @@
-<p>This is the default markup for component Products</p>
+{% set category = __SELF__ . category %}
 
-<small>You can delete this file if you want</small>
+<section class="container mt-5">
+    <h1 class="mb-4">{{ category.title }}</h1>
+    <div class="row">
+        {% for product in category.products %}
+        <div class="col-4">
+            <div class="card" style="width: 18rem; height: 100%; background: #e6e6e6">
+                {% set image = product.featured_images|first.path ?? 'assets/images/default-image.png'|theme %}
+                <img class="card-img-top" src="{{ image }}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="{{ category.slug }}/{{ product.slug }}">{{ product.title }}</a>
+                    </h5>
+                    <p class="card-text">{{ product.short_description }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

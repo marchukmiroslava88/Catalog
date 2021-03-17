@@ -21,9 +21,6 @@ fields:
     description:
         label: 'Описание'
         type: richeditor
-    featured_images:
-        label: Файлы
-        type: fileupload
 
 secondaryTabs:
     fields:
@@ -31,10 +28,3 @@ secondaryTabs:
             label: 'Отображать на сайте'
             type: checkbox
             default: true
-        preview_button@update:
-            type: partial
-        category:
-            label: 'Категория'
-            nameFrom: title
-            emptyOption: --
-            type: relation

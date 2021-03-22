@@ -9,7 +9,7 @@ list: $/onlinestore/catalog/models/category/columns.yaml
 modelClass: OnlineStore\Catalog\Models\Category
 
 # List Title
-title: Manage Categories
+title: onlinestore.catalog::lang.system.labels.manage_categories
 
 # Link URL for each record
 recordUrl: onlinestore/catalog/categories/update/:id

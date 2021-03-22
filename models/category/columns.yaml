@@ -4,10 +4,10 @@
 
 columns:
     id:
-        label: ID
+        label: 'onlinestore.catalog::lang.product.columns.id'
         searchable: true
     title:
-        label: Название
+        label: 'onlinestore.catalog::lang.product.columns.title'
         searchable: true
     created_at:
-        label: Дата создания
+        label: 'onlinestore.catalog::lang.product.columns.created_at'

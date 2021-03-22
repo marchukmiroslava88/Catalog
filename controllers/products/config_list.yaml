@@ -9,7 +9,7 @@ list: $/onlinestore/catalog/models/product/columns.yaml
 modelClass: OnlineStore\Catalog\Models\Product
 
 # List Title
-title: Manage Products
+title: onlinestore.catalog::lang.system.labels.manage_products
 
 # Link URL for each record
 recordUrl: onlinestore/catalog/products/update/:id

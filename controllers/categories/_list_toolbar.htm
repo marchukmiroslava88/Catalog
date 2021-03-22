@@ -2,7 +2,7 @@
     <a
         href="<?= Backend::url('onlinestore/catalog/categories/create') ?>"
         class="btn btn-primary oc-icon-plus">
-        New Category
+        <?= e(trans('onlinestore.catalog::lang.system.buttons.new_category')) ?>
     </a>
 
     <button
@@ -10,12 +10,12 @@
         disabled="disabled"
         onclick="$(this).data('request-data', { checked: $('.control-list').listWidget('getChecked') })"
         data-request="onDelete"
-        data-request-confirm="Are you sure you want to delete the selected Categories?"
+        data-request-confirm="<?= e(trans('onlinestore.catalog::lang.system.alerts.confirm_delete_categories')) ?>"
         data-trigger-action="enable"
         data-trigger=".control-list input[type=checkbox]"
         data-trigger-condition="checked"
         data-request-success="$(this).prop('disabled', 'disabled')"
         data-stripe-load-indicator>
-        Delete selected
+        <?= e(trans('onlinestore.catalog::lang.system.buttons.delete_selected')) ?>
     </button>
 </div>

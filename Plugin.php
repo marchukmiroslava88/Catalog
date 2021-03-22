@@ -36,12 +36,12 @@ class Plugin extends PluginBase
     {
         return [
             'onlinestore.catalog.categories' => [
-                'tab' => 'Категории',
-                'label' => 'Доступ к категориям'
+                'tab' => 'onlinestore.catalog::lang.permissions.tab',
+                'label' => 'onlinestore.catalog::lang.permissions.categories_access'
             ],
             'onlinestore.catalog.products' => [
-                'tab' => 'Товары',
-                'label' => 'Доступ товарам'
+                'tab' => 'onlinestore.catalog::lang.permissions.tab',
+                'label' => 'onlinestore.catalog::lang.permissions.products_access'
             ],
         ];
     }
@@ -55,26 +55,26 @@ class Plugin extends PluginBase
     {
         return [
             'catalog' => [
-                'label'       => 'Каталог',
+                'label'       => 'onlinestore.catalog::lang.plugin.name',
                 'url'         => Backend::url('onlinestore/catalog/products'),
                 'icon'        => 'icon-list-alt',
                 'permissions' => ['onlinestore.catalog.*'],
                 'order'       => 500,
                 'sideMenu' => [
                     'new_product' => [
-                        'label'       => 'Новый товар',
+                        'label'       => 'onlinestore.catalog::lang.side_menu.new_product',
                         'icon'        => 'icon-plus',
                         'url'         => Backend::url('onlinestore/catalog/products/create'),
                         'permissions' => ['onlinestore.catalog.products']
                     ],
                     'products' => [
-                        'label'       => 'Товары',
+                        'label'       => 'onlinestore.catalog::lang.side_menu.products',
                         'icon'        => 'icon-th',
                         'url'         => Backend::url('onlinestore/catalog/products'),
                         'permissions' => ['onlinestore.catalog.products']
                     ],
                     'categories' => [
-                        'label'       => 'Категории',
+                        'label'       => 'onlinestore.catalog::lang.side_menu.categories',
                         'icon'        => 'icon-bars',
                         'url'         => Backend::url('onlinestore/catalog/categories'),
                         'permissions' => ['onlinestore.catalog.categories']

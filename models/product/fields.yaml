@@ -4,37 +4,37 @@
 
 fields:
     title:
-        label: 'Название'
+        label: 'onlinestore.catalog::lang.product.fields.title'
         span: left
         required: 1
         type: text
     slug:
-        label: 'URL'
+        label: 'onlinestore.catalog::lang.product.fields.slug'
         span: right
         required: 1
         preset: title
         type: text
     short_description:
-        label: 'Краткое описание'
+        label: 'onlinestore.catalog::lang.product.fields.short_description'
         type: textarea
         size: small
     description:
-        label: 'Описание'
+        label: 'onlinestore.catalog::lang.product.fields.description'
         type: richeditor
     featured_images:
-        label: Файлы
+        label: 'onlinestore.catalog::lang.product.fields.featured_images'
         type: fileupload
 
 secondaryTabs:
     fields:
         published:
-            label: 'Отображать на сайте'
+            label: 'onlinestore.catalog::lang.product.fields.published'
             type: checkbox
             default: true
         preview_button@update:
             type: partial
         category:
-            label: 'Категория'
+            label: 'onlinestore.catalog::lang.product.fields.category'
             nameFrom: title
             emptyOption: --
             type: relation

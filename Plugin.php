@@ -32,6 +32,20 @@ class Plugin extends PluginBase
         ];
     }
 
+    public function registerPermissions()
+    {
+        return [
+            'onlinestore.catalog.categories' => [
+                'tab' => 'Категории',
+                'label' => 'Доступ к категориям'
+            ],
+            'onlinestore.catalog.products' => [
+                'tab' => 'Товары',
+                'label' => 'Доступ товарам'
+            ],
+        ];
+    }
+
     /**
      * Registers back-end navigation items for this plugin.
      *
@@ -51,19 +65,19 @@ class Plugin extends PluginBase
                         'label'       => 'Новый товар',
                         'icon'        => 'icon-plus',
                         'url'         => Backend::url('onlinestore/catalog/products/create'),
-                        'permissions' => ['onlinestore.catalog.*']
+                        'permissions' => ['onlinestore.catalog.products']
                     ],
                     'products' => [
                         'label'       => 'Товары',
                         'icon'        => 'icon-th',
                         'url'         => Backend::url('onlinestore/catalog/products'),
-                        'permissions' => ['onlinestore.catalog.*']
+                        'permissions' => ['onlinestore.catalog.products']
                     ],
                     'categories' => [
                         'label'       => 'Категории',
                         'icon'        => 'icon-bars',
                         'url'         => Backend::url('onlinestore/catalog/categories'),
-                        'permissions' => ['onlinestore.catalog.*']
+                        'permissions' => ['onlinestore.catalog.categories']
                     ],
                 ]
             ],

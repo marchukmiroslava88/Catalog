@@ -8,6 +8,8 @@ use Backend\Classes\Controller;
  */
 class Categories extends Controller
 {
+    public $requiredPermissions = ['onlinestore.catalog.categories'];
+
     /**
      * @var array Behaviors that are implemented by this controller.
      */

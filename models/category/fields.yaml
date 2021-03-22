@@ -4,27 +4,27 @@
 
 fields:
     title:
-        label: 'Название'
+        label: 'onlinestore.catalog::lang.category.fields.title'
         span: left
         required: 1
         type: text
     slug:
-        label: 'URL'
+        label: 'onlinestore.catalog::lang.category.fields.slug'
         span: right
         required: 1
         preset: title
         type: text
     short_description:
-        label: 'Краткое описание'
+        label: 'onlinestore.catalog::lang.category.fields.short_description'
         type: textarea
         size: small
     description:
-        label: 'Описание'
+        label: 'onlinestore.catalog::lang.category.fields.description'
         type: richeditor
 
 secondaryTabs:
     fields:
         published:
-            label: 'Отображать на сайте'
+            label: 'onlinestore.catalog::lang.category.fields.published'
             type: checkbox
             default: true

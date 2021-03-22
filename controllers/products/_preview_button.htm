@@ -2,6 +2,8 @@
 
 <div class="form-group  partial-field collapse-visible">
     <div class="form-buttons loading-indicator-container">
-        <a href="<?= BackendPreview::link($model, 'product'); ?>" target="_blank" class="btn btn-primary oc-icon-crosshairs">Предварительный просмотр</a>
+        <a href="<?= BackendPreview::link($model, 'product'); ?>" target="_blank" class="btn btn-primary oc-icon-crosshairs">
+            <?= e(trans('onlinestore.catalog::lang.system.buttons.preview')); ?>
+        </a>
     </div>
 </div>

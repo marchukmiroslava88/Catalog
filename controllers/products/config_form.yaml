@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: Product
+name: onlinestore.catalog::lang.system.labels.product
 
 # Model Form Field configuration
 form: $/onlinestore/catalog/models/product/fields.yaml
@@ -16,16 +16,16 @@ defaultRedirect: onlinestore/catalog/products
 
 # Create page
 create:
-    title: Create Product
+    title: onlinestore.catalog::lang.system.labels.create_product
     redirect: onlinestore/catalog/products/update/:id
     redirectClose: onlinestore/catalog/products
 
 # Update page
 update:
-    title: Edit Product
+    title: onlinestore.catalog::lang.system.labels.edit_product
     redirect: onlinestore/catalog/products
     redirectClose: onlinestore/catalog/products
 
 # Preview page
 preview:
-    title: Preview Product
+    title: onlinestore.catalog::lang.system.labels.preview_product

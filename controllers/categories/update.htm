@@ -1,6 +1,10 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('onlinestore/catalog/categories') ?>">Categories</a></li>
+        <li>
+            <a href="<?= Backend::url('onlinestore/catalog/categories') ?>">
+                <?= e(trans('onlinestore.catalog::lang.system.labels.categories')) ?>
+            </a>
+        </li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -22,7 +26,7 @@
                     data-hotkey="ctrl+s, cmd+s"
                     data-load-indicator="Saving Category..."
                     class="btn btn-primary">
-                    <u>S</u>ave
+                    <?= e(trans('onlinestore.catalog::lang.system.buttons.save')) ?>
                 </button>
                 <button
                     type="button"
@@ -31,7 +35,7 @@
                     data-hotkey="ctrl+enter, cmd+enter"
                     data-load-indicator="Saving Category..."
                     class="btn btn-default">
-                    Save and Close
+                    <?= e(trans('onlinestore.catalog::lang.system.buttons.save_and_close')) ?>
                 </button>
                 <button
                     type="button"
@@ -41,7 +45,10 @@
                     data-request-confirm="Delete this category?">
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('onlinestore/catalog/categories') ?>">Cancel</a>
+                    <?= e(trans('onlinestore.catalog::lang.system.labels.or')) ?>
+                    <a href="<?= Backend::url('onlinestore/catalog/categories') ?>">
+                         <?= e(trans('onlinestore.catalog::lang.system.buttons.cancel')) ?>
+                    </a>
                 </span>
             </div>
         </div>
@@ -63,6 +70,10 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('onlinestore/catalog/categories') ?>" class="btn btn-default">Return to categories list</a></p>
+    <p>
+        <a href="<?= Backend::url('onlinestore/catalog/categories') ?>" class="btn btn-default">
+            <?= e(trans('onlinestore.catalog::lang.system.buttons.products_return')) ?>
+        </a>
+    </p>
 
 <?php endif ?>

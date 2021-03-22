@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: Category
+name: onlinestore.catalog::lang.system.labels.category
 
 # Model Form Field configuration
 form: $/onlinestore/catalog/models/category/fields.yaml
@@ -16,16 +16,16 @@ defaultRedirect: onlinestore/catalog/categories
 
 # Create page
 create:
-    title: Create Category
+    title: onlinestore.catalog::lang.system.labels.create_category
     redirect: onlinestore/catalog/categories/update/:id
     redirectClose: onlinestore/catalog/categories
 
 # Update page
 update:
-    title: Edit Category
+    title: onlinestore.catalog::lang.system.labels.edit_category
     redirect: onlinestore/catalog/categories
     redirectClose: onlinestore/catalog/categories
 
 # Preview page
 preview:
-    title: Preview Category
+    title: onlinestore.catalog::lang.system.labels.preview_category

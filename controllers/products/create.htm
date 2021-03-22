@@ -1,6 +1,10 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('onlinestore/catalog/products') ?>">Products</a></li>
+        <li>
+            <a href="<?= Backend::url('onlinestore/catalog/products') ?>">
+                <?= e(trans('onlinestore.catalog::lang.system.labels.products')) ?>
+            </a>
+        </li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -21,7 +25,7 @@
                     data-hotkey="ctrl+s, cmd+s"
                     data-load-indicator="Creating Product..."
                     class="btn btn-primary">
-                    Create
+                    <?= e(trans('onlinestore.catalog::lang.system.buttons.create')) ?>
                 </button>
                 <button
                     type="button"
@@ -30,10 +34,13 @@
                     data-hotkey="ctrl+enter, cmd+enter"
                     data-load-indicator="Creating Product..."
                     class="btn btn-default">
-                    Create and Close
+                    <?= e(trans('onlinestore.catalog::lang.system.buttons.create_and_close')) ?>
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('onlinestore/catalog/products') ?>">Cancel</a>
+                    <?= e(trans('onlinestore.catalog::lang.system.labels.or')) ?>
+                    <a href="<?= Backend::url('onlinestore/catalog/products') ?>">
+                         <?= e(trans('onlinestore.catalog::lang.system.buttons.cancel')) ?>
+                    </a>
                 </span>
             </div>
         </div>
@@ -55,6 +62,10 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('onlinestore/catalog/products') ?>" class="btn btn-default">Return to products list</a></p>
+    <p>
+        <a href="<?= Backend::url('onlinestore/catalog/products') ?>" class="btn btn-default">
+            <?= e(trans('onlinestore.catalog::lang.system.buttons.categories_return')) ?>
+        </a>
+    </p>
 
 <?php endif ?>

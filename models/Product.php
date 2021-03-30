@@ -10,7 +10,8 @@ class Product extends Model
     use \October\Rain\Database\Traits\Validation;
 
     public $implement = [
-        '@KitSoft.Pages.Behaviors.RelationFinderModel'
+        '@KitSoft.Pages.Behaviors.RelationFinderModel',
+        '@KitSoft.TagsManager.Behaviors.ModelBehavior'
     ];
 
     /**

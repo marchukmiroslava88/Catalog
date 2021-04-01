@@ -73,6 +73,28 @@ class Product extends Model
     }
 
     /**
+     * Get product title.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public function getTitleAttribute($value)
+    {
+        return ucfirst($value);
+    }
+
+    /**
+     * Set product description.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public function setDescriptionAttribute($value)
+    {
+        $this->attributes['description'] = strtolower($value);
+    }
+
+    /**
      * @var array Relations
      */
     public $hasOne = [];

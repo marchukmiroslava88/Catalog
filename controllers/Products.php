@@ -15,7 +15,8 @@ class Products extends Controller
      */
     public $implement = [
         'Backend.Behaviors.FormController',
-        'Backend.Behaviors.ListController'
+        'Backend.Behaviors.ListController',
+        '@KitSoft.TagsManager.Behaviors.ControllerBehavior'
     ];
 
     public $bodyClass = 'compact-container';

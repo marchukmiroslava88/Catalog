@@ -1,0 +1,13 @@
+scopes:
+    published:
+        label: onlinestore.catalog::lang.product.fields.published
+        type: switch
+        conditions:
+            - published <> '1'
+            - published = '1'
+    category:
+        label: onlinestore.catalog::lang.product.fields.category
+        type: group
+        modelClass: OnlineStore\Catalog\Models\Category
+        nameFrom: title
+        conditions: category_id in (:filtered)

@@ -32,7 +32,10 @@ class Product extends Model
     /**
      * @var array Validation rules for attributes
      */
-    public $rules = [];
+    public $rules = [
+        'title' => 'required|max:500',
+        'slug' => ['required', 'regex:/^[a-z0-9\:_\-\*\[\]\+\?\|]*$/i'],
+    ];
 
     /**
      * @var array Attributes to be cast to native types

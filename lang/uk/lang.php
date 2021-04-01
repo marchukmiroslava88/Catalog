@@ -48,6 +48,14 @@ return [
             'title' => 'Назва',
             'created_at' => 'Дата створення',
         ],
+        'relation' => [
+            'category' => 'до Категорії',
+            'products' => 'Товари',
+            'columns' => [
+                'title' => 'Назва товару',
+                'id' => 'ID товару',
+            ],
+        ],
     ],
 
     'system' => [

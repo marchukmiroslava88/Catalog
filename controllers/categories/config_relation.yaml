@@ -1,0 +1,7 @@
+products:
+    label: onlinestore.catalog::lang.category.relation.category
+    view:
+        list: $/onlinestore/catalog/models/product/relation_columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        list: $/onlinestore/catalog/models/product/relation_columns.yaml

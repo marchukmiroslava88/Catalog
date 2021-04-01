@@ -1,0 +1,9 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: onlinestore.catalog::lang.category.relation.columns.id
+    title:
+        label: onlinestore.catalog::lang.category.relation.columns.title

@@ -14,13 +14,24 @@ fields:
         required: 1
         preset: title
         type: text
-    short_description:
-        label: 'onlinestore.catalog::lang.category.fields.short_description'
-        type: textarea
-        size: small
-    description:
-        label: 'onlinestore.catalog::lang.category.fields.description'
-        type: richeditor
+
+tabs:
+    fields:
+        short_description:
+            label: 'onlinestore.catalog::lang.category.fields.short_description'
+            type: textarea
+            size: small
+            tab: 'onlinestore.catalog::lang.category.fields.description'
+        description:
+            label: 'onlinestore.catalog::lang.category.fields.description'
+            type: richeditor
+            tab: 'onlinestore.catalog::lang.category.fields.description'
+        products:
+            label: 'onlinestore.catalog::lang.product.fields.category'
+            context: update
+            type: partial
+            path: $/onlinestore/catalog/controllers/categories/_products.htm
+            tab: 'onlinestore.catalog::lang.category.relation.products'
 
 secondaryTabs:
     fields:

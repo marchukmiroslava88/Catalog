@@ -24,6 +24,9 @@ fields:
     featured_images:
         label: 'onlinestore.catalog::lang.product.fields.featured_images'
         type: fileupload
+    tags:
+        type: taglist
+        mode: relation
 
 secondaryTabs:
     fields:

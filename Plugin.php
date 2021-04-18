@@ -23,12 +23,25 @@ class Plugin extends PluginBase
         ];
     }
 
+    /**
+     * Register twig filters
+     */
+    public function registerMarkupTags()
+    {
+        return [
+            'filters' => [
+                'brandsFilter' => ['OnlineStore\Catalog\Twig\BrandsFilter', 'brandsFilter']
+            ]
+        ];
+    }
+
     public function registerComponents()
     {
         return [
             'OnlineStore\Catalog\Components\Products' => 'catalog',
             'OnlineStore\Catalog\Components\Product' => 'product',
             'OnlineStore\Catalog\Components\Categories' => 'categories',
+            'OnlineStore\Catalog\Components\Brands' => 'brands',
         ];
     }
 
@@ -78,6 +91,12 @@ class Plugin extends PluginBase
                         'icon'        => 'icon-bars',
                         'url'         => Backend::url('onlinestore/catalog/categories'),
                         'permissions' => ['onlinestore.catalog.categories']
+                    ],
+                    'brands' => [
+                        'label'       => 'onlinestore.catalog::lang.side_menu.brands',
+                        'icon'        => 'icon-bars',
+                        'url'         => Backend::url('onlinestore/catalog/brands'),
+                        'permissions' => ['onlinestore.catalog.*']
                     ],
                 ]
             ],

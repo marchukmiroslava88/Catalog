@@ -2,3 +2,4 @@
     - Run table migrations
     - create_products_table.php
     - create_categories_table.php
+    - create_brands_table.php

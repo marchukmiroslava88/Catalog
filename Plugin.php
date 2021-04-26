@@ -102,4 +102,11 @@ class Plugin extends PluginBase
             ],
         ];
     }
+
+    public function boot()
+    {
+        Event::listen('onlinestore.category.open', function($category) {
+            $category->description = $category->description ?: 'test description';
+        });
+    }
 }

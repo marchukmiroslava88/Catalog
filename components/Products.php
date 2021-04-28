@@ -29,6 +29,7 @@ class Products extends ComponentBase
     public function onRun()
     {
         $this->category = $this->loadCategory();
+        Event::fire('onlinestore.category.open', [$this->category]);
     }
 
     /**

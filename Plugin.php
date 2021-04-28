@@ -109,4 +109,9 @@ class Plugin extends PluginBase
             $category->description = $category->description ?: 'test description';
         });
     }
+
+    public function register()
+    {
+        $this->registerConsoleCommand('catalog:testcommand', 'OnlineStore\Catalog\Console\TestCommand');
+    }
 }

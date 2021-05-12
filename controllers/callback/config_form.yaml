@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Callback
+
+# Model Form Field configuration
+form: $/onlinestore/catalog/models/callback/fields.yaml
+
+# Model Class name
+modelClass: OnlineStore\Catalog\Models\Callback
+
+# Default redirect location
+defaultRedirect: onlinestore/catalog/callback
+
+# Create page
+create:
+    title: Create Callback
+    redirect: onlinestore/catalog/callback/update/:id
+    redirectClose: onlinestore/catalog/callback
+
+# Update page
+update:
+    title: Edit Callback
+    redirect: onlinestore/catalog/callback
+    redirectClose: onlinestore/catalog/callback
+
+# Preview page
+preview:
+    title: Preview Callback

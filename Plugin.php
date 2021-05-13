@@ -120,4 +120,16 @@ class Plugin extends PluginBase
             ],
         ];
     }
+
+    /**
+     * Registers mail templates
+     *
+     * @return array
+     */
+    public function registerMailTemplates()
+    {
+        return [
+            'onlinestore.catalog::mail.confirm' => 'Sent callback confirmation',
+        ];
+    }
 }

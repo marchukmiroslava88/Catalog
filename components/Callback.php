@@ -7,6 +7,7 @@ use ApplicationException;
 use Exception;
 use Cms\Classes\ComponentBase;
 use OnlineStore\Catalog\Models\Callback as CallbackModel;
+use Illuminate\Support\Facades\Mail;
 
 class Callback extends ComponentBase
 {
@@ -33,6 +34,7 @@ class Callback extends ComponentBase
         $validator = Validator::make($data, [
             'name' => 'required|min:3',
             'phone' => 'required|regex:#^380[0-9]{9}$#',
+            'email' => 'required|email',
         ]);
 
         if ($validator->fails()) {
@@ -50,6 +52,11 @@ class Callback extends ComponentBase
             $callback->phone = $phone;
             $callback->email = $email;
             $callback->save();
+
+            Mail::sendTo($callback->email, 'onlinestore.catalog::mail.confirm', [
+                'callback' => $callback
+            ]);
+
         } catch (Exception $e) {
             Db::rollback();
             trace_log($e);

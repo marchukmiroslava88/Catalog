@@ -102,4 +102,22 @@ class Plugin extends PluginBase
             ],
         ];
     }
+
+    /**
+     * registerSettings
+     */
+    public function registerSettings()
+    {
+        return [
+            'callback' => [
+                'label'       => 'Входящие',
+                'description' => '',
+                'icon'        => 'icon-envelope',
+                'url'         => Backend::url('onlinestore/catalog/callback'),
+                'order'       => 1,
+                'category'    => 'callback',
+                'permissions' => ['onlinestore.catalog.*']
+            ],
+        ];
+    }
 }

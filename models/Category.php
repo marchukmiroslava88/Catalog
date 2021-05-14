@@ -8,6 +8,7 @@ use Model;
 class Category extends Model
 {
     use \October\Rain\Database\Traits\Validation;
+    use \October\Rain\Database\Traits\Sortable;
 
     public $implement = [
         '@KitSoft.Pages.Behaviors.RelationFinderModel'

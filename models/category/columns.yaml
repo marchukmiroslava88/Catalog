@@ -6,8 +6,11 @@ columns:
     id:
         label: 'onlinestore.catalog::lang.product.columns.id'
         searchable: true
+        sortable: false
     title:
         label: 'onlinestore.catalog::lang.product.columns.title'
         searchable: true
+        sortable: false
     created_at:
         label: 'onlinestore.catalog::lang.product.columns.created_at'
+        sortable: false

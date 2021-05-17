@@ -7,10 +7,13 @@ use ApplicationException;
 use Exception;
 use Cms\Classes\ComponentBase;
 use OnlineStore\Catalog\Models\Callback as CallbackModel;
+use OnlineStore\Catalog\Models\Settings;
 use Illuminate\Support\Facades\Mail;
 
 class Callback extends ComponentBase
 {
+    public $recaptcha;
+
     public function componentDetails()
     {
         return [
@@ -25,6 +28,25 @@ class Callback extends ComponentBase
     }
 
     /**
+     * onRun
+     */
+    public function onRun()
+    {
+        $this->recaptcha = $this->loadRecaptcha();
+    }
+
+    /**
+     * loadRecaptcha
+     */
+    protected function loadRecaptcha()
+    {
+        return [
+            'site_key' => Settings::get('site_key'),
+            'lang'     => Settings::get('lang')
+        ];
+    }
+
+    /**
      * onCallback
      */
     public function onCallback()
@@ -35,6 +57,7 @@ class Callback extends ComponentBase
             'name' => 'required|min:3',
             'phone' => 'required|regex:#^380[0-9]{9}$#',
             'email' => 'required|email',
+            'g-recaptcha-response' => 'required',
         ]);
 
         if ($validator->fails()) {

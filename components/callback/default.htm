@@ -1,3 +1,5 @@
+{% set recaptcha = __SELF__.recaptcha %}
+
 <form class="p-3"
       data-request="onCallback"
       data-request-success="$(this).remove()"
@@ -9,6 +11,12 @@
         <input type="text" name="phone" placeholder="380935555555">
         <input type="text" name="email" placeholder="Your email">
     </p>
+
+    <div class="form-group" class="field-recaptcha">
+        <div class="g-recaptcha" data-sitekey="{{ recaptcha.site_key }}"></div>
+        <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl={{ recaptcha.lang }}"></script>
+    </div>
+
     <button type="submit" class="btn btn-info">Отправить</button>
 </form>
 <div class="callback-form-result"></div>

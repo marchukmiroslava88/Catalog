@@ -42,6 +42,7 @@ class Plugin extends PluginBase
             'OnlineStore\Catalog\Components\Product' => 'product',
             'OnlineStore\Catalog\Components\Categories' => 'categories',
             'OnlineStore\Catalog\Components\Brands' => 'brands',
+            'OnlineStore\Catalog\Components\Callback' => 'callback',
         ];
     }
 
@@ -115,6 +116,15 @@ class Plugin extends PluginBase
                 'icon'        => 'icon-envelope',
                 'url'         => Backend::url('onlinestore/catalog/callback'),
                 'order'       => 1,
+                'category'    => 'callback',
+                'permissions' => ['onlinestore.catalog.*']
+            ],
+            'settings' => [
+                'label'       => 'Настройки',
+                'description' => '',
+                'icon'        => 'icon-cog',
+                'class'       => 'OnlineStore\Catalog\Models\Settings',
+                'order'       => 2,
                 'category'    => 'callback',
                 'permissions' => ['onlinestore.catalog.*']
             ],

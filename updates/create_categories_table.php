@@ -16,6 +16,7 @@ class CreateCategoriesTable extends Migration
             $table->text('description')->nullable();
             $table->string('slug');
             $table->boolean('published')->default(false);
+            $table->integer('sort_order')->default(0);
             $table->timestamps();
         });
     }

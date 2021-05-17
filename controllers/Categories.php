@@ -17,7 +17,10 @@ class Categories extends Controller
         'Backend.Behaviors.FormController',
         'Backend.Behaviors.ListController',
         'Backend.Behaviors.RelationController',
+        'Backend.Behaviors.ReorderController'
     ];
+
+    public $reorderConfig = 'config_reorder.yaml';
 
     public $bodyClass = 'compact-container';
 

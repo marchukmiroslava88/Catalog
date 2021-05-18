@@ -11,7 +11,8 @@ class Product extends Model
 
     public $implement = [
         '@KitSoft.Pages.Behaviors.RelationFinderModel',
-        '@KitSoft.TagsManager.Behaviors.ModelBehavior'
+        '@KitSoft.TagsManager.Behaviors.ModelBehavior',
+        '@OnlineStore.Schema.Behaviors.ModelBehavior'
     ];
 
     /**

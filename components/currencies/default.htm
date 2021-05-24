@@ -1,0 +1,7 @@
+{% set currencies = __SELF__ . currencies %}
+
+<select name="" id="">
+    {% for currency in currencies %}
+    <option value="{{ currency.code }}" {% if currency.is_default %} selected {% endif %}>{{ currency.name }}</option>
+    {% endfor %}
+</select>

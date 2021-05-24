@@ -43,6 +43,7 @@ class Plugin extends PluginBase
             'OnlineStore\Catalog\Components\Categories' => 'categories',
             'OnlineStore\Catalog\Components\Brands' => 'brands',
             'OnlineStore\Catalog\Components\Callback' => 'callback',
+            'OnlineStore\Catalog\Components\Currencies' => 'currencies',
         ];
     }
 
@@ -127,6 +128,15 @@ class Plugin extends PluginBase
                 'order'       => 2,
                 'category'    => 'callback',
                 'permissions' => ['onlinestore.catalog.*']
+            ],
+            'currency' => [
+                'label'       => 'currency',
+                'description' => 'currency description',
+                'category'    => 'settings',
+                'icon'        => 'oc-icon-usd',
+                'url'         => Backend::url('onlinestore/catalog/currencies'),
+                'order'       => 3,
+                'permissions' => ['onlinestore.catalog.*'],
             ],
         ];
     }

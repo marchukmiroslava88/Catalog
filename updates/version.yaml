@@ -4,3 +4,4 @@
     - create_categories_table.php
     - create_brands_table.php
     - create_callbacks_table.php
+    - create_currencies_table.php

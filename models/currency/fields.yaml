@@ -1,0 +1,31 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    active:
+        label: 'Active'
+        span: left
+        default: 1
+        type: switch
+    is_default:
+        label: 'Is default'
+        span: right
+        default: 0
+        type: switch
+    name:
+        label: 'Name'
+        span: left
+        type: text
+    code:
+        label: 'Code'
+        span: right
+        type: text
+    symbol:
+        label: 'Symbol'
+        span: left
+        type: text
+    rate:
+        label: 'Rate'
+        span: right
+        type: number

@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('slug');
             $table->boolean('published')->default(false);
             $table->integer('category_id')->nullable()->unsigned();
+            $table->boolean('is_top')->default('false');
             $table->timestamps();
         });
     }

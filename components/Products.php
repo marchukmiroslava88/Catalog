@@ -2,6 +2,7 @@
 
 use Cms\Classes\ComponentBase;
 use OnlineStore\Catalog\Models\Category;
+use OnlineStore\Catalog\Classes\PriceHelper;
 
 class Products extends ComponentBase
 {
@@ -29,6 +30,26 @@ class Products extends ComponentBase
     public function onRun()
     {
         $this->category = $this->loadCategory();
+        $this->formatPrice();
+    }
+
+    public function formatPrice()
+    {
+        foreach ($this->category->products as $product) {
+            if ($product->price) {
+                $product->price = PriceHelper::formatPrice(floatval($product->price));
+            }
+
+            if ($product->old_price) {
+                $product->old_price = PriceHelper::formatPrice(floatval($product->old_price));
+            }
+
+            if ($product->price && $product->old_price) {
+                $product->discount = PriceHelper::formatPrice(
+                    floatval($product->old_price) - floatval($product->price)
+                );
+            }
+        }
     }
 
     /**
@@ -39,7 +60,7 @@ class Products extends ComponentBase
         $slug = $this->property('slug');
 
         return Category::with('products')
-                ->where('slug', $slug)
-                ->first();
+            ->where('slug', $slug)
+            ->first();
     }
 }

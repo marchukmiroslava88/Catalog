@@ -13,6 +13,17 @@
                         <a href="{{ category.slug }}/{{ product.slug }}">{{ product.title }}</a>
                     </h5>
                     <p class="card-text">{{ product.short_description }}</p>
+                    <p>
+                        {% if product.old_price %}
+                            <p>Старая цена: <strike>{{ product.old_price }}</strike></p>
+                        {% endif %}
+                        {% if product.price %}
+                            <p>Цена: <span>{{ product.price }}</span></p>
+                        {% endif %}
+                        {% if product.discount %}
+                            <p>Скидка: <strong>{{ product.discount }}</strong></p>
+                        {% endif %}
+                    </p>
                 </div>
             </div>
         </div>

@@ -1,0 +1,27 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+tabs:
+    fields:
+        decimals:
+            tab: Price format
+            span: left
+            label: Decimals
+        dec_sep:
+            tab: Price format
+            span: left
+            label: Decimal Separator
+            type: dropdown
+            options:
+                dot: dot
+                comma: comma
+        thousands_sep:
+            tab: Price format
+            span: left
+            label: Thousands Separator
+            type: dropdown
+            options:
+                together: together
+                space: space
+

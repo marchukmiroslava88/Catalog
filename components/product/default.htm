@@ -30,7 +30,17 @@
             {% endif %}
         </div>
         <div class="col-lg-8">
-            {{ product.description|raw }}
+            <p>{{ product.description|raw }}</p>
+
+            {% if product.old_price %}
+                <p>Старая цена: <strike>{{ product.old_price }}</strike></p>
+            {% endif %}
+            {% if product.price %}
+                <p>Цена: <span>{{product.price}}</span></p>
+            {% endif %}
+            {% if product.discount %}
+                <p>Скидка: <strong>{{ product.discount }}</strong></p>
+            {% endif %}
         </div>
     </div>
 </section>

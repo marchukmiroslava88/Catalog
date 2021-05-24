@@ -14,6 +14,8 @@ class CreateProductsTable extends Migration
             $table->string('title')->nullable();
             $table->text('short_description')->nullable();
             $table->text('description')->nullable();
+            $table->decimal('price', 15, 2)->nullable();
+            $table->decimal('old_price', 15, 2)->nullable();
             $table->string('slug');
             $table->boolean('published')->default(false);
             $table->integer('category_id')->nullable()->unsigned();

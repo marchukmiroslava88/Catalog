@@ -138,6 +138,14 @@ class Plugin extends PluginBase
                 'order'       => 3,
                 'permissions' => ['onlinestore.catalog.*'],
             ],
+            'common_settings' => [
+                'label'       => 'Application Settings',
+                'description' => '',
+                'icon'        => 'icon-cogs',
+                'class'       => 'OnlineStore\Catalog\Models\CommonSettings',
+                'order'       => 3,
+                'permissions' => ['onlinestore.catalog.*'],
+            ],
         ];
     }
 

@@ -41,3 +41,11 @@ secondaryTabs:
             nameFrom: title
             emptyOption: --
             type: relation
+        price:
+            label: 'Price'
+            type: number
+            searchable: false
+        old_price:
+            label: 'Old price'
+            type: number
+            searchable: false

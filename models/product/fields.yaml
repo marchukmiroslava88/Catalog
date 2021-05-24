@@ -34,6 +34,9 @@ secondaryTabs:
             label: 'onlinestore.catalog::lang.product.fields.published'
             type: checkbox
             default: true
+        is_top:
+            label: Топ
+            type: checkbox
         preview_button@update:
             type: partial
         category:

@@ -113,4 +113,12 @@ class Product extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = ['featured_images' => ['KitSoft\Pages\Models\SystemFile']];
+
+    /**
+     * scopeIsTop
+     */
+    public function scopeIsTop($query)
+    {
+        return $query->where('is_top', true);
+    }
 }

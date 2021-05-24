@@ -44,6 +44,7 @@ class Plugin extends PluginBase
             'OnlineStore\Catalog\Components\Brands' => 'brands',
             'OnlineStore\Catalog\Components\Callback' => 'callback',
             'OnlineStore\Catalog\Components\Currencies' => 'currencies',
+            'OnlineStore\Catalog\Components\TopProducts' => 'topproducts',
         ];
     }
 

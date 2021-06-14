@@ -37,4 +37,9 @@ class Products extends Controller
 
         BackendMenu::setContext('OnlineStore.Catalog', 'catalog', 'products');
     }
+
+    public function onTest()
+    {
+        // Do something
+    }
 }
